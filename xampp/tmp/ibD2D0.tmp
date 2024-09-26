@@ -1,0 +1,130 @@
+
+=====================================
+2024-09-24 23:43:39 0x10a4 INNODB MONITOR OUTPUT
+=====================================
+Per second averages calculated from the last 11 seconds
+-----------------
+BACKGROUND THREAD
+-----------------
+srv_master_thread loops: 9 srv_active, 0 srv_shutdown, 1866 srv_idle
+srv_master_thread log flush and writes: 1875
+----------
+SEMAPHORES
+----------
+OS WAIT ARRAY INFO: reservation count 63
+OS WAIT ARRAY INFO: signal count 48
+RW-shared spins 111, rounds 1789, OS waits 56
+RW-excl spins 5, rounds 6, OS waits 0
+RW-sx spins 0, rounds 0, OS waits 0
+Spin rounds per wait: 16.12 RW-shared, 1.20 RW-excl, 0.00 RW-sx
+------------------------
+LATEST FOREIGN KEY ERROR
+------------------------
+2024-09-24 23:43:31 0x10a4 Error in foreign key constraint of table `sistemagestiondb`.`if`:
+Create  table `sistemagestiondb`.`if` with foreign key constraint failed. Parse error in '
+    FOREIGN KEY (`idIncidente`)
+    REFERENCES `sistemagestionDB`.`incidentes` (`idIncidentes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_historia_voluntarios`
+    FOREIGN KEY (`idVoluntario`)
+    REFERENCES `sistemagestionDB`.`voluntarios` (`idVoluntarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+) ENGINE=InnoDB' near '`idIncidentes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_historia_voluntarios`
+    FOREIGN KEY (`idVoluntario`)
+    REFERENCES `sistemagestionDB`.`voluntarios` (`idVoluntarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+) ENGINE=InnoDB'.
+------------
+TRANSACTIONS
+------------
+Trx id counter 1688
+Purge done for trx's n:o < 1688 undo n:o < 0 state: running but idle
+History list length 51
+LIST OF TRANSACTIONS FOR EACH SESSION:
+---TRANSACTION 283680846594192, not started
+0 lock struct(s), heap size 1128, 0 row lock(s)
+--------
+FILE I/O
+--------
+I/O thread 0 state: native aio handle (insert buffer thread)
+I/O thread 1 state: native aio handle (log thread)
+I/O thread 2 state: native aio handle (read thread)
+I/O thread 3 state: native aio handle (read thread)
+I/O thread 4 state: native aio handle (read thread)
+I/O thread 5 state: native aio handle (read thread)
+I/O thread 6 state: native aio handle (write thread)
+I/O thread 7 state: native aio handle (write thread)
+I/O thread 8 state: native aio handle (write thread)
+I/O thread 9 state: native aio handle (write thread)
+Pending normal aio reads: [0, 0, 0, 0] , aio writes: [0, 0, 0, 0] ,
+ ibuf aio reads:, log i/o's:, sync i/o's:
+Pending flushes (fsync) log: 0; buffer pool: 0
+389 OS file reads, 433 OS file writes, 142 OS fsyncs
+0.18 reads/s, 16384 avg bytes/read, 1.45 writes/s, 0.82 fsyncs/s
+-------------------------------------
+INSERT BUFFER AND ADAPTIVE HASH INDEX
+-------------------------------------
+Ibuf: size 1, free list len 0, seg size 2, 0 merges
+merged operations:
+ insert 0, delete mark 0, delete 0
+discarded operations:
+ insert 0, delete mark 0, delete 0
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+Hash table size 4441, node heap has 0 buffer(s)
+0.00 hash searches/s, 5.73 non-hash searches/s
+---
+LOG
+---
+Log sequence number 1263582
+Log flushed up to   1263582
+Pages flushed up to 1263582
+Last checkpoint at  1263573
+0 pending log flushes, 0 pending chkp writes
+98 log i/o's done, 0.36 log i/o's/second
+----------------------
+BUFFER POOL AND MEMORY
+----------------------
+Total large memory allocated 33554432
+Dictionary memory allocated 35056
+Buffer pool size   1003
+Free buffers       747
+Database pages     256
+Old database pages 0
+Modified db pages  0
+Percent of dirty pages(LRU & free pages): 0.000
+Max dirty pages percent: 75.000
+Pending reads 0
+Pending writes: LRU 0, flush list 0, single page 0
+Pages made young 0, not young 0
+0.00 youngs/s, 0.00 non-youngs/s
+Pages read 372, created 169, written 324
+0.18 reads/s, 0.55 creates/s, 0.91 writes/s
+Buffer pool hit rate 992 / 1000, young-making rate 0 / 1000 not 0 / 1000
+Pages read ahead 0.00/s, evicted without access 0.00/s, Random read ahead 0.00/s
+LRU len: 256, unzip_LRU len: 0
+I/O sum[12]:cur[0], unzip sum[0]:cur[0]
+--------------
+ROW OPERATIONS
+--------------
+0 queries inside InnoDB, 0 queries in queue
+0 read views open inside InnoDB
+Process ID=19316, Main thread ID=5304, state: sleeping
+Number of rows inserted 0, updated 0, deleted 0, read 0
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+Number of system rows inserted 0, updated 0, deleted 0, read 0
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+----------------------------
+END OF INNODB MONITOR OUTPUT
+============================

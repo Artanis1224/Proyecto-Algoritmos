@@ -1,0 +1,20 @@
+2024-09-24 23:43:31 0x10a4 Error in foreign key constraint of table `sistemagestiondb`.`if`:
+Create  table `sistemagestiondb`.`if` with foreign key constraint failed. Parse error in '
+    FOREIGN KEY (`idIncidente`)
+    REFERENCES `sistemagestionDB`.`incidentes` (`idIncidentes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_historia_voluntarios`
+    FOREIGN KEY (`idVoluntario`)
+    REFERENCES `sistemagestionDB`.`voluntarios` (`idVoluntarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+) ENGINE=InnoDB' near '`idIncidentes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_historia_voluntarios`
+    FOREIGN KEY (`idVoluntario`)
+    REFERENCES `sistemagestionDB`.`voluntarios` (`idVoluntarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+) ENGINE=InnoDB'.
